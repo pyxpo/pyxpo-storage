@@ -22,7 +22,7 @@ import threading
 from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple, Union
 
-__version__ = "0.1.0"
+__version__ = "0.1.0a1"
 
 __all__ = [
     "Storage", "storage", "default_directory",

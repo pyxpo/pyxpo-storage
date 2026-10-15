@@ -3,7 +3,7 @@
 Fast synchronous key-value storage for pyxpo apps. The API follows react-native-mmkv, and the
 AsyncStorage method names work too (without `await`).
 
-This is an optional [pyxpo](https://github.com/ivishalchaubey/pyxpo) module. It is pure Python: it adds
+This is an optional [pyxpo](https://github.com/pyxpo/pyxpo) module. It is pure Python: it adds
 no Swift or Kotlin code and no permissions.
 
 ## Install
