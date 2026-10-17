@@ -38,6 +38,12 @@ _ID_RE = re.compile(r"^[A-Za-z0-9_.-]{1,120}$")
 _STRING, _NUMBER, _BOOL, _BYTES = "s", "n", "b", "x"
 
 
+def _ios_container() -> bool:
+    """iOS, or the iOS shell built for Mac (Catalyst Python reports sys.platform "darwin"): HOME is laid out
+    like an iOS app container."""
+    return sys.platform == "ios" or os.environ.get("PYXPO_TARGET") == "ios"
+
+
 def default_directory() -> Path:
     """Where storage files live: the app's private data folder (backed up with the app, removed on uninstall).
 
@@ -47,7 +53,7 @@ def default_directory() -> Path:
     if env:
         return Path(env)
     home = Path(os.path.expanduser("~"))
-    if sys.platform == "ios":
+    if _ios_container():
         return home / "Library" / "Application Support" / "pyxpo-storage"
     if sys.platform == "android":
         return home / "pyxpo-storage"
