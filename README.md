@@ -52,7 +52,7 @@ storage.get_string("user.name")        # "Asha"
 | Android, API 24+ | Everything. File in `files/pyxpo-storage`. |
 | iOS 15+ | Everything. File in `Library/Application Support/pyxpo-storage`. |
 | Desktop window and tests | Everything. File in `.pyxpo-data/storage` in the working folder. |
-| Web page | The same Python code runs on the page's own file system. Not verified to survive a reload, so keep important data on a server too. |
+| Web page | Everything. File in `.pyxpo-data/storage`, kept in the browser's IndexedDB across reloads. The web build loads Pyodide's `sqlite3`. |
 
 Requires Python 3.9+ and `pyxpo>=0.1.0a1`. Set `PYXPO_STORAGE_DIR` to move the files (useful in tests).
 
@@ -192,8 +192,8 @@ Set `PYXPO_STORAGE_DIR` to override where the files live. `default_directory()` 
 ## Web and desktop
 
 The desktop window and tests use `.pyxpo-data/storage` in the working folder. The web page runs the same Python code
-against the page's own file system, so treat it as a convenience cache rather than permanent storage until you have
-checked it for your host.
+in Pyodide. The web build loads Pyodide's `sqlite3` package, and the page keeps `.pyxpo-data/storage` in the browser's
+IndexedDB, so values survive a reload. Clearing site data in the browser removes them.
 
 ## Recipe: settings screen
 
@@ -222,7 +222,7 @@ def Settings():
 - [ ] Secrets are in `pyxpo-secure-store`, not here.
 - [ ] Per-user data uses `Storage(id=...)` and is cleared on sign-out (`clear_all()`).
 - [ ] You keep values small. Large data belongs in `pyxpo-sqlite` or files.
-- [ ] You do not rely on web persistence.
+- [ ] On the web you accept that clearing site data removes the values.
 - [ ] Your tests set `PYXPO_STORAGE_DIR` to a temp folder.
 - [ ] You handle `None` from every getter.
 

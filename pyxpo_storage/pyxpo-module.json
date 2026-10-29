@@ -2,5 +2,10 @@
   "schemaVersion": 1,
   "nativeContract": 1,
   "name": "storage",
-  "native": "Storage"
+  "native": "Storage",
+  "web": {
+    "packages": [
+      "sqlite3"
+    ]
+  }
 }
