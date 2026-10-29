@@ -31,11 +31,11 @@ requires-python = ">=3.9"
 dependencies = ["pyxpo>=0.1.0a1,<0.2"]
 
 [project.urls]
-Homepage = "https://github.com/pyxpo/pyxpo/tree/main/packages/storage"
-Documentation = "https://github.com/pyxpo/pyxpo/blob/main/packages/storage/README.md"
-Changelog = "https://github.com/pyxpo/pyxpo/blob/main/packages/storage/CHANGELOG.md"
-Source = "https://github.com/pyxpo/pyxpo/tree/main/packages/storage"
-Issues = "https://github.com/pyxpo/pyxpo/issues"
+Homepage = "https://github.com/pyxpo/pyxpo-storage"
+Documentation = "https://github.com/pyxpo/pyxpo-storage/blob/main/README.md"
+Changelog = "https://github.com/pyxpo/pyxpo-storage/blob/main/CHANGELOG.md"
+Source = "https://github.com/pyxpo/pyxpo-storage"
+Issues = "https://github.com/pyxpo/pyxpo-storage/issues"
 
 # How `pyxpo build` finds this module: the entry point name is the module name apps list in
 # `[tool.pyxpo] modules`, its value the import package holding pyxpo-module.json.

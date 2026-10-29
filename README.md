@@ -6,7 +6,7 @@ Fast, synchronous key-value storage for [pyxpo](https://github.com/pyxpo/pyxpo) 
 when `set` returns. It is plain Python on top of SQLite, so there is no native code to link.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo/main/packages/storage/docs/images/hero.png" width="820" alt="Stored values read back on Android and iOS: a string, a launch counter and an object">
+  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo-storage/main/docs/images/hero.png" width="820" alt="Stored values read back on Android and iOS: a string, a launch counter and an object">
 </p>
 
 ```python
@@ -92,7 +92,7 @@ def Home():
 > `storage.set(...)` calls. `set_value(None)` deletes the key, and `set_value(lambda old: ...)` updates from the current value.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo/main/packages/storage/docs/images/values.png" width="720" alt="The stored name, launch count and object, with Set name, Launches +1 and Delete name buttons, on Android and iOS">
+  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo-storage/main/docs/images/values.png" width="720" alt="The stored name, launch count and object, with Set name, Launches +1 and Delete name buttons, on Android and iOS">
 </p>
 
 ## Values
