@@ -1,5 +1,7 @@
 # pyxpo-storage
 
+[![CI](https://github.com/pyxpo/pyxpo-storage/actions/workflows/ci.yml/badge.svg)](https://github.com/pyxpo/pyxpo-storage/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/pyxpo-storage)](https://pypi.org/project/pyxpo-storage/) [![Python](https://img.shields.io/pypi/pyversions/pyxpo-storage)](https://pypi.org/project/pyxpo-storage/) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 Fast, synchronous key-value storage for [pyxpo](https://github.com/pyxpo/pyxpo) apps written in Python. The API follows
 [react-native-mmkv](https://github.com/mrousavy/react-native-mmkv), and the AsyncStorage method names (`set_item`,
 `get_item`, `multi_get`, `merge_item`) work too, without `await`. Reads come from memory, and every write is on disk
